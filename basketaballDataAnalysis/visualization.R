@@ -1,0 +1,17 @@
+#visualization using matplot
+?matplot
+matplot(FieldGoals)
+FieldGoals
+
+t(FieldGoals) #transpose the matrix
+matplot(t(FieldGoals), type = "b", pch = 15:18, col = c(1:4,6))
+legend("bottomleft", inset = 0.01, legend = Players, col = c(1:4,6), pch = 15:18, horiz = F)
+
+goal <- round(FieldGoals / FieldGoalAttempts, 3)
+goal
+
+matplot(t(goal), type = "b", pch = 15:18, col = c(1:4,6))
+legend("bottomleft", inset = 0.01, legend = Players, col = c(1:4,6), pch = 15:18, horiz = F)
+
+#subset
+
